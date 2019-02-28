@@ -30,11 +30,13 @@ export default {
   }),
   created() {
     fetchListings()
+      .then(r => r.json())
       .then(ads => {
         this.ads = ads;
+        this.isLoading = false;
       })
-      .catch(console.error)
-      .finally(() => {
+      .catch(err => {
+        console.error(err);
         this.isLoading = false;
       });
   }

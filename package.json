@@ -9,6 +9,7 @@
     "now-build": "npm run build"
   },
   "dependencies": {
+    "ky": "^0.9.0",
     "vue": "2.6.7"
   },
   "devDependencies": {
